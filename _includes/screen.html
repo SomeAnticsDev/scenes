@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Some Antics - Solo</title>
+	<link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+	<div id="left">
+		<section id="screen"></section>
+		<header id="banner">
+			<h1>{{ title }}</h1>
+			<p>Some Antics</p>
+		</header>
+	</div>
+	<div id="right">
+		<section class="camera"></section>
+		{% if pair %}<section class="camera"></section>{% endif %}
+		<section id="chat"></section>
+	</div>
+</body>
+</html>

@@ -1,0 +1,14 @@
+{
+  "name": "scenes",
+  "version": "1.0.0",
+  "main": ".eleventy.js",
+  "author": "Ben Myers <ben@benmyers.dev>",
+  "license": "MIT",
+  "scripts": {
+	  "build": "eleventy",
+	  "dev": "eleventy --serve"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "^0.11.1"
+  }
+}

@@ -1,0 +1,34 @@
+html, body {margin: 0;}
+body {
+	height: 100vh;
+	width: 100vw;
+	display: grid;
+	grid-template-columns: 1456px 336px;
+}
+
+#left {
+	display: grid;
+	grid-template-rows: 910px 210px;
+}
+
+#screen {
+	background-color: tomato;
+}
+
+#banner {
+	background-color: turquoise;
+}
+
+.camera {
+	background-color: violet;
+	height: 336px;
+}
+
+.camera + .camera {
+	background-color: darkkhaki;
+}
+
+#chat {
+	background-color: cornflowerblue;
+	height: 100%;
+}
