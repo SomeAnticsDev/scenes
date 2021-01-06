@@ -31,19 +31,12 @@
 .sender {
 	font-weight: 900;
 	margin-bottom: .3em;
-}
-
-.sender {
 	color: var(--primary-light);
 }
 
-li:nth-child(1) .sender,
-li:nth-child(2) .sender,
-li:nth-child(4) .sender,
 .sender.broadcaster,
 .sender.mod,
 .sender.subscriber {
-	/* font-weight: 800; */
 	color: white;
 	width: fit-content;
 	padding: 2% 2% 1%;
@@ -51,19 +44,18 @@ li:nth-child(4) .sender,
 }
 
 /* It me! */
-li:nth-child(1) .sender,
 .sender.broadcaster {
 	background-color: var(--secondary-shade);
 }
 
-li:nth-child(2) .sender,
+/* Moderators */
 .sender.mod {
-	background-color: var(--ternary);
+	background-color: var(--ternary-glare);
 	color: black;
 	font-weight: 800;
 }
 
-li:nth-child(4) .sender,
+/* Subscribers */
 .sender.subscriber {
 	background-color: var(--primary-glare);
 }

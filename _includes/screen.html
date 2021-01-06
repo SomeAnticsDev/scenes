@@ -83,6 +83,15 @@
 			// Format sender
 			const sender = document.createElement('p');
 			sender.classList.add('sender');
+			let role;
+			if (tags.username === 'someanticsdev' || tags.username === 'bendmyers') {
+				role = 'broadcaster';
+			} else if (tags.mod) {
+				role = 'mod';
+			} else if (tags.subscriber) {
+				role = 'subscriber';
+			}
+			role && sender.classList.add(role);
 			sender.innerText = tags['display-name'];
 
 			// Format message
