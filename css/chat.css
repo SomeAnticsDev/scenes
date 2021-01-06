@@ -10,6 +10,10 @@
 	flex-direction:column-reverse;
 }
 
+.camera + .camera + #chat {
+	height: calc(1210px - 2*(336px));
+}
+
 #chat::-webkit-scrollbar {
 	display: none;
 }
@@ -71,6 +75,7 @@ li:nth-child(4) .sender,
 	font-family: Inter, Verdana, sans-serif;
 }
 
-.camera + .camera + #chat {
-	height: calc(1210px - 2*(336px));
+.emote {
+	display: inline;
+	width: 1.5em;
 }
