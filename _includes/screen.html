@@ -49,6 +49,7 @@
 			newMessage.appendChild(messageContents);
 			chatbox.appendChild(newMessage);
 			console.log(`${tags['display-name']}: ${message}`);
+			newMessage.scrollTop = newMessage.scrollHeight;
 		});
 	</script>
 </body>
