@@ -1,0 +1,69 @@
+#chat {
+	background-color: var(--primary-shade);
+	color: white;
+	font-family: Nexa, Verdana, sans-serif;
+	height: calc(1210px - 336px);
+	overflow-y: hidden;
+	scroll-snap-align: end;
+}
+
+#chat ul {
+	list-style: none;
+	padding-left: 1em;
+	padding-right: 1em;
+}
+
+#chat ul li + li {
+	margin-top: 1.5em;
+}
+
+.sender {
+	font-weight: 900;
+	margin-bottom: .3em;
+}
+
+.sender {
+	color: var(--primary-light);
+}
+
+li:nth-child(1) .sender,
+li:nth-child(2) .sender,
+li:nth-child(4) .sender,
+.sender.broadcaster,
+.sender.mod,
+.sender.subscriber {
+	/* font-weight: 800; */
+	color: white;
+	width: fit-content;
+	padding: 2% 2% 1%;
+	margin-left: -0.5%;
+}
+
+/* It me! */
+li:nth-child(1) .sender,
+.sender.broadcaster {
+	background-color: var(--secondary-shade);
+}
+
+li:nth-child(2) .sender,
+.sender.mod {
+	background-color: var(--ternary);
+	color: black;
+	font-weight: 800;
+}
+
+li:nth-child(4) .sender,
+.sender.subscriber {
+	background-color: var(--primary-glare);
+}
+
+.sender + p {
+	margin-top: 0;
+	font-weight: 500;
+	line-height: 1.25em;
+	font-family: Inter, Verdana, sans-serif;
+}
+
+.camera + .camera + #chat {
+	height: calc(1210px - 2*(336px));
+}

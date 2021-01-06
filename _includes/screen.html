@@ -4,7 +4,9 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Some Antics - Solo</title>
+	<script src="https://github.com/tmijs/tmi.js/releases/download/v1.7.1/tmi.min.js"></script>
 	<link rel="stylesheet" href="/css/style.css" />
+	<link rel="stylesheet" href="/css/chat.css" />
 </head>
 <body>
 	<div id="left">
@@ -17,7 +19,37 @@
 	<div id="right">
 		<section class="camera"></section>
 		{% if pair %}<section class="camera"></section>{% endif %}
-		<section id="chat"></section>
+		<section id="chat">
+			<ul></ul>
+		</section>
 	</div>
+	<script>
+		const chatbox = document.querySelector('#chat ul');
+
+		const client = new tmi.Client({
+			connection: {
+				secure: true,
+				reconnect: true
+			},
+			channels: ['jacksepticeye']
+		});
+
+		client.connect();
+
+		client.on('message', (channel, tags, message, self) => {
+			// "Alca: Hello, World!"
+			console.dir({channel, tags, message, self});
+			const newMessage = document.createElement('li');
+			const sender = document.createElement('p');
+			sender.classList.add('sender');
+			sender.innerText = tags['display-name'];
+			const messageContents = document.createElement('p');
+			messageContents.innerText = message;
+			newMessage.appendChild(sender);
+			newMessage.appendChild(messageContents);
+			chatbox.appendChild(newMessage);
+			console.log(`${tags['display-name']}: ${message}`);
+		});
+	</script>
 </body>
 </html>

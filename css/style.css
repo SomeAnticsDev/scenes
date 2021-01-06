@@ -1,8 +1,14 @@
-html, body {margin: 0;}
+html, body {
+	margin: 0;
+	height: 1210px;
+	width: 100vw;
+	/* overflow: hidden; */
+}
 
 :root {
 	--primary: #4c1074;
-    --primary-glare: #743c9b;
+	--primary-glare: #743c9b;
+	--primary-light: #AA87C3;
     --primary-soft: #EBE1F3;
     --primary-harsh: #1c0929;
     --primary-shade: #280241;
@@ -21,8 +27,6 @@ html, body {margin: 0;}
 }
 
 body {
-	height: 100vh;
-	width: 100vw;
 	display: grid;
 	grid-template-columns: 1456px 336px;
 }
@@ -68,9 +72,4 @@ p.show-name {
 
 .camera + .camera {
 	background-color: darkkhaki;
-}
-
-#chat {
-	background-color: cornflowerblue;
-	height: 100%;
 }
