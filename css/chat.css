@@ -2,8 +2,8 @@
 	background-color: var(--primary-shade);
 	color: white;
 	font-family: Nexa, Verdana, sans-serif;
-	max-height: calc(1210px - 336px);
-
+	height: 784px;
+	
 	/* This stuff is the magic that lets us add new messages to the bottom and push the old messages up */
 	overflow: auto;
 	display: flex;
@@ -11,7 +11,8 @@
 }
 
 .camera + .camera + #chat {
-	height: calc(1210px - 2*(336px));
+	/* height: calc(1210px - 2*(336px)); */
+	height: 448px;
 }
 
 #chat::-webkit-scrollbar {

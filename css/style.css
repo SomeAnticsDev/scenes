@@ -36,6 +36,11 @@ body {
 	grid-template-rows: 910px 210px;
 }
 
+#right {
+	display: flex;
+	flex-direction: column;
+}
+
 #screen {
 	background-color: tomato;
 }
