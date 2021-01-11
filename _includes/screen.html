@@ -3,8 +3,8 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Some Antics - Solo</title>
-	<script src="https://github.com/tmijs/tmi.js/releases/download/v1.7.1/tmi.min.js"></script>
+	<title>Some Antics Scenes</title>
+	<script src="https://cdn.jsdelivr.net/npm/comfy.js@latest/dist/comfy.min.js"></script>
 	<link rel="stylesheet" href="/css/style.css" />
 	<link rel="stylesheet" href="/css/chat.css" />
 </head>
@@ -65,44 +65,67 @@
 
 		const chatbox = document.querySelector('#chat ul');
 
-		const client = new tmi.Client({
-			connection: {
-				secure: true,
-				reconnect: true
-			},
-			channels: ['jacksepticeye', 'functionsanddragons', 'gamesdonequick', 'smitegame']
-		});
-
-		client.connect();
-
-		client.on('message', (channel, tags, message, self) => {
-			console.dir({channel, tags, message, self});
-
+		/**
+		 * @param {string} user user's display name
+		 * 
+		 * @param {string} message user's message
+		 * 
+		 * @param {object} flags metadata about the user
+		 * @param {boolean} flags.broadcaster whether this user is the streamer (me)
+		 * @param {boolean} flags.customReward
+		 * @param {boolean} flags.highlighted
+		 * @param {boolean} flags.mod whether this user is a moderator
+		 * @param {boolean} flags.subscriber whether this user has subscribed to the channel
+		 * @param {boolean} flags.vip whether this user is a channel VIP
+		 * 
+		 * @param {boolean} self
+		 * 
+		 * @param {object} extra more metadata
+		 * @param {string} extra.channel which channel this message was sent to
+		 * @param {string} extra.customRewardId
+		 * @param {string} extra.displayName user's display name
+		 * @param {*} extra.flags
+		 * @param {string} extra.id message ID
+		 * @param {boolean} extra.isEmoteOnly whether this message only consists of emotes, possibly good as a style hook
+		 * @param {Object<string, string[]>} extra.messageEmotes list of all emotes used in the message. The keys are the emote ID, and the values are arrays of range-strings with the start and ending indices for those emotes.
+		 * @param {string} extra.messageType
+		 * @param {string} extra.roomId
+		 * @param {string} extra.timestamp stringified timestamp, presumably milliseconds since Unix epoch
+		 * @param {object} extra.userBadges
+		 * @param {string} extra.userColor hex code of user's color as it would display in the native Twitch chatbox
+		 * @param {string} extra.userId
+		 * @param {object} extra.userState
+		 * @param {string} extra.username user's username, which is the lowercased version of the display name
+		 */
+		ComfyJS.onChat = (user, message, flags, self, extra) => {
 			const newMessage = document.createElement('li');
 
 			// Format sender
 			const sender = document.createElement('p');
 			sender.classList.add('sender');
 			let role;
-			if (tags.username === 'someanticsdev' || tags.username === 'bendmyers') {
+			if (flags.broadcaster || user === 'BenDMyers') {
 				role = 'broadcaster';
-			} else if (tags.mod) {
+			} else if (flags.mod) {
 				role = 'mod';
-			} else if (tags.subscriber) {
+			} else if (flags.subscriber) {
 				role = 'subscriber';
 			}
 			role && sender.classList.add(role);
-			sender.innerText = tags['display-name'];
+			sender.innerText = user;
 
 			// Format message
 			const messageContents = document.createElement('p');
-			messageContents.innerHTML = formatEmotes(message, tags.emotes);
-			
-			// Add message to chatbox
+			messageContents.innerHTML = formatEmotes(message, extra.messageEmotes);
+
 			newMessage.appendChild(sender);
 			newMessage.appendChild(messageContents);
+			newMessage.id = extra.id;
+
 			chatbox.appendChild(newMessage);
-		});
+		}
+
+		ComfyJS.Init('Spikevegeta');
 	</script>
 </body>
 </html>
