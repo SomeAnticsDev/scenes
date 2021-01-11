@@ -66,51 +66,22 @@
 		const chatbox = document.querySelector('#chat ul');
 
 		/**
-		 * @param {string} user user's display name
-		 * 
-		 * @param {string} message user's message
-		 * 
-		 * @param {object} flags metadata about the user
-		 * @param {boolean} flags.broadcaster whether this user is the streamer (me)
-		 * @param {boolean} flags.customReward
-		 * @param {boolean} flags.highlighted
-		 * @param {boolean} flags.mod whether this user is a moderator
-		 * @param {boolean} flags.subscriber whether this user has subscribed to the channel
-		 * @param {boolean} flags.vip whether this user is a channel VIP
-		 * 
-		 * @param {boolean} self
-		 * 
-		 * @param {object} extra more metadata
-		 * @param {string} extra.channel which channel this message was sent to
-		 * @param {string} extra.customRewardId
-		 * @param {string} extra.displayName user's display name
-		 * @param {*} extra.flags
-		 * @param {string} extra.id message ID
-		 * @param {boolean} extra.isEmoteOnly whether this message only consists of emotes, possibly good as a style hook
-		 * @param {Object<string, string[]>} extra.messageEmotes list of all emotes used in the message. The keys are the emote ID, and the values are arrays of range-strings with the start and ending indices for those emotes.
-		 * @param {string} extra.messageType
-		 * @param {string} extra.roomId
-		 * @param {string} extra.timestamp stringified timestamp, presumably milliseconds since Unix epoch
-		 * @param {object} extra.userBadges
-		 * @param {string} extra.userColor hex code of user's color as it would display in the native Twitch chatbox
-		 * @param {string} extra.userId
-		 * @param {object} extra.userState
-		 * @param {string} extra.username user's username, which is the lowercased version of the display name
+		 * Displays a message in the chat box.
+		 * @param {string} user sender's display name
+		 * @param {string} message message contents, not yet sanitized or emotified
+		 * @param {Object<string, string[]>} emotes ranges for emotes in message contents
 		 */
-		ComfyJS.onChat = (user, message, flags, self, extra) => {
+		function displayMessage(user, message, flags, self, extra) {
 			const newMessage = document.createElement('li');
 
 			// Format sender
 			const sender = document.createElement('p');
 			sender.classList.add('sender');
 			let role;
-			if (flags.broadcaster || user === 'BenDMyers') {
-				role = 'broadcaster';
-			} else if (flags.mod) {
-				role = 'mod';
-			} else if (flags.subscriber) {
-				role = 'subscriber';
-			}
+			if (flags.broadcaster || user === 'BenDMyers') role = 'broadcaster';
+			else if (flags.mod) role = 'mod';
+			else if (flags.subscriber) role = 'subscriber';
+			
 			role && sender.classList.add(role);
 			sender.innerText = user;
 
@@ -125,6 +96,8 @@
 			chatbox.appendChild(newMessage);
 		}
 
+		ComfyJS.onChat = displayMessage;
+
 		ComfyJS.onMessageDeleted = (id, extra) => {
 			let deletedMessage = document.getElementById(id);
 			if (deletedMessage) {
@@ -137,6 +110,12 @@
 			eventNotice.classList.add('event', 'sub');
 			eventNotice.innerHTML = `<span class="event-user">${user}</span> subscribed!`;
 			chatbox.appendChild(eventNotice);
+
+			console.log({user, message, subTierInfo, extra});
+
+			if (message) {
+				displayMessage(user, message, {subscriber: true}, false, extra);
+			}
 		}
 
 		ComfyJS.onResub = (user, message, streamMonths, cumulativeMonths, subTierInfo, extra) => {
@@ -145,6 +124,10 @@
 			eventNotice.classList.add('event', 'sub');
 			eventNotice.innerHTML = `<span class="event-user">${user}</span> resubscribed!`;
 			chatbox.appendChild(eventNotice);
+
+			if (message) {
+				displayMessage(user, message, {subscriber: true}, false, extra);
+			}
 		}
 
 		ComfyJS.Init('jacksepticeye');
