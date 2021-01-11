@@ -2,7 +2,10 @@ html, body {
 	margin: 0;
 	height: 1210px;
 	width: 100vw;
-	/* overflow: hidden; */
+}
+
+body::-webkit-scrollbar {
+	display: none !important;
 }
 
 :root {
