@@ -135,7 +135,15 @@
 		ComfyJS.onSub = (user, message, subTierInfo, extra) => {
 			const eventNotice = document.createElement('li');
 			eventNotice.classList.add('event', 'sub');
-			eventNotice.innerHTML = `<span class="event-user">${user}</span> just subscribed!`;
+			eventNotice.innerHTML = `<span class="event-user">${user}</span> subscribed!`;
+			chatbox.appendChild(eventNotice);
+		}
+
+		ComfyJS.onResub = (user, message, streamMonths, cumulativeMonths, subTierInfo, extra) => {
+			console.log({user, message, streamMonths, cumulativeMonths, subTierInfo, extra})
+			const eventNotice = document.createElement('li');
+			eventNotice.classList.add('event', 'sub');
+			eventNotice.innerHTML = `<span class="event-user">${user}</span> resubscribed!`;
 			chatbox.appendChild(eventNotice);
 		}
 
