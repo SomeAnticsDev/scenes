@@ -3,8 +3,8 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Some Antics - Solo</title>
-	<script src="https://github.com/tmijs/tmi.js/releases/download/v1.7.1/tmi.min.js"></script>
+	<title>Some Antics Scenes</title>
+	<script src="https://cdn.jsdelivr.net/npm/comfy.js@latest/dist/comfy.min.js"></script>
 	<link rel="stylesheet" href="/css/style.css" />
 	<link rel="stylesheet" href="/css/chat.css" />
 </head>
@@ -65,44 +65,72 @@
 
 		const chatbox = document.querySelector('#chat ul');
 
-		const client = new tmi.Client({
-			connection: {
-				secure: true,
-				reconnect: true
-			},
-			channels: ['jacksepticeye', 'functionsanddragons', 'gamesdonequick', 'smitegame']
-		});
-
-		client.connect();
-
-		client.on('message', (channel, tags, message, self) => {
-			console.dir({channel, tags, message, self});
-
+		/**
+		 * Displays a message in the chat box.
+		 * @param {string} user sender's display name
+		 * @param {string} message message contents, not yet sanitized or emotified
+		 * @param {Object<string, string[]>} emotes ranges for emotes in message contents
+		 */
+		function displayMessage(user, message, flags, self, extra) {
 			const newMessage = document.createElement('li');
 
 			// Format sender
 			const sender = document.createElement('p');
 			sender.classList.add('sender');
 			let role;
-			if (tags.username === 'someanticsdev' || tags.username === 'bendmyers') {
-				role = 'broadcaster';
-			} else if (tags.mod) {
-				role = 'mod';
-			} else if (tags.subscriber) {
-				role = 'subscriber';
-			}
+			if (flags.broadcaster || user === 'BenDMyers') role = 'broadcaster';
+			else if (flags.mod) role = 'mod';
+			else if (flags.subscriber) role = 'subscriber';
+			
 			role && sender.classList.add(role);
-			sender.innerText = tags['display-name'];
+			sender.innerText = user;
 
 			// Format message
 			const messageContents = document.createElement('p');
-			messageContents.innerHTML = formatEmotes(message, tags.emotes);
-			
-			// Add message to chatbox
+			messageContents.innerHTML = formatEmotes(message, extra.messageEmotes);
+
 			newMessage.appendChild(sender);
 			newMessage.appendChild(messageContents);
+			newMessage.id = extra.id;
+
 			chatbox.appendChild(newMessage);
-		});
+		}
+
+		ComfyJS.onChat = displayMessage;
+
+		ComfyJS.onMessageDeleted = (id, extra) => {
+			let deletedMessage = document.getElementById(id);
+			if (deletedMessage) {
+				deletedMessage.remove();
+			}
+		}
+
+		ComfyJS.onSub = (user, message, subTierInfo, extra) => {
+			const eventNotice = document.createElement('li');
+			eventNotice.classList.add('event', 'sub');
+			eventNotice.innerHTML = `<span class="event-user">${user}</span> subscribed!`;
+			chatbox.appendChild(eventNotice);
+
+			console.log({user, message, subTierInfo, extra});
+
+			if (message) {
+				displayMessage(user, message, {subscriber: true}, false, extra);
+			}
+		}
+
+		ComfyJS.onResub = (user, message, streamMonths, cumulativeMonths, subTierInfo, extra) => {
+			console.log({user, message, streamMonths, cumulativeMonths, subTierInfo, extra})
+			const eventNotice = document.createElement('li');
+			eventNotice.classList.add('event', 'sub');
+			eventNotice.innerHTML = `<span class="event-user">${user}</span> resubscribed!`;
+			chatbox.appendChild(eventNotice);
+
+			if (message) {
+				displayMessage(user, message, {subscriber: true}, false, extra);
+			}
+		}
+
+		ComfyJS.Init('jacksepticeye');
 	</script>
 </body>
 </html>
