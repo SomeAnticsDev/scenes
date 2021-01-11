@@ -1,3 +1,3 @@
 module.exports = {
-	title: `Reviewing RedwoodJS Docs with Anthony Campolo`
+	title: `Reviewing RedwoodJS Tutorials with Anthony Campolo`
 }
