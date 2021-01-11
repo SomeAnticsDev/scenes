@@ -132,7 +132,14 @@
 			}
 		}
 
-		ComfyJS.Init('Spikevegeta');
+		ComfyJS.onSub = (user, message, subTierInfo, extra) => {
+			const eventNotice = document.createElement('li');
+			eventNotice.classList.add('event', 'sub');
+			eventNotice.innerHTML = `<span class="event-user">${user}</span> just subscribed!`;
+			chatbox.appendChild(eventNotice);
+		}
+
+		ComfyJS.Init('jacksepticeye');
 	</script>
 </body>
 </html>

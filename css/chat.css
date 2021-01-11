@@ -72,3 +72,21 @@
 	display: inline;
 	width: 1.5em;
 }
+
+.event {
+	text-align: center;
+	color: white;
+	font-family: 'Nexa', sans-serif;
+	font-weight: 800;
+	background-color: var(--primary-harsh);
+
+	width: calc(100% + 4em);
+	margin-left: -2em;
+	padding-top: 1.25em;
+	padding-bottom: 1em;
+}
+
+.event .event-user {
+	color: var(--ternary);
+	font-weight: 900;
+}
