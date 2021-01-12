@@ -65,7 +65,6 @@ h1 {
 p.twitter-handle {
 	background-color: var(--primary-shade);
 	color: white;
-	/* display: inline-block; */
 	align-items: center;
 	display: flex;
     font-family: Nexa,sans-serif;
@@ -74,7 +73,7 @@ p.twitter-handle {
 	font-weight: 300;
 	line-height: 0;
     margin: 0% 2.5% 0% 2.5%;
-	padding: 0.5% 1% 0% 0.5%;
+	padding: 0% 1% 0% 0.5%;
 	width: fit-content;
 }
 
