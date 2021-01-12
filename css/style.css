@@ -74,12 +74,8 @@ p.twitter-handle {
 	font-weight: 300;
 	line-height: 0;
     margin: 0% 2.5% 0% 2.5%;
-	padding: 1.5% 1% 1% 1%;
+	padding: 0.5% 1% 0% 0.5%;
 	width: fit-content;
-}
-
-p.twitter-handle .twitter-username {
-	margin-left: 0.25em;
 }
 
 p.twitter-handle .at {
@@ -90,6 +86,10 @@ p.twitter-handle .at {
 
 img[alt="Twitter"] {
 	height: 30px;
+}
+
+.twitter-logo {
+	height: 60px;
 }
 
 .camera {
