@@ -1,3 +1,3 @@
 module.exports = {
-	title: `Putting RedwoodJS Docs to the Test With Anthony Campolo`
+	title: `Diving Into the Web Content Accessibility Guidelines with Todd Libby`
 }
