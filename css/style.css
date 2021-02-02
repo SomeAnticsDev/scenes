@@ -1,7 +1,7 @@
 html, body {
 	margin: 0;
-	height: 1210px;
-	width: 100vw;
+	height: 1080px;
+	width: 1920px;
 }
 
 body::-webkit-scrollbar {
@@ -31,12 +31,13 @@ body::-webkit-scrollbar {
 
 body {
 	display: grid;
-	grid-template-columns: 1456px 336px;
+	grid-template-columns: 1456px 464px;
 }
 
 #left {
 	display: grid;
-	grid-template-rows: 910px 210px;
+	/* grid-template-rows: 910px 210px; */
+	grid-template-rows: 910px 170px;
 }
 
 #right {
@@ -60,7 +61,7 @@ h1 {
 	font-size: 38px;
 	font-weight: 900;
 	text-shadow: 10px 10px var(--primary-shade);
-	margin: 3.5% 2.5% 1% 2.5%;
+	margin: 2.5% 2.5% 1% 2.5%;
 }
 
 p.twitter-handle {
