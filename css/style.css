@@ -36,7 +36,6 @@ body {
 
 #left {
 	display: grid;
-	/* grid-template-rows: 910px 210px; */
 	grid-template-rows: 910px 170px;
 }
 
