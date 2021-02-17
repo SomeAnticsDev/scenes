@@ -1,3 +1,3 @@
 module.exports = {
-	title: `Let's Build a Stream Schedule with Eleventy!`
+	title: `Building Accessible SVG Icons in React with Chantastic`
 }
