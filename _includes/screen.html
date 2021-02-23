@@ -85,6 +85,7 @@
 			let role;
 			if (flags.broadcaster || user === 'BenDMyers') role = 'broadcaster';
 			else if (flags.mod) role = 'mod';
+			else if (flags.vip) role = 'vip';
 			else if (flags.subscriber) role = 'subscriber';
 			
 			role && sender.classList.add(role);
