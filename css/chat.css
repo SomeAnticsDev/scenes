@@ -50,16 +50,16 @@
 	background-color: var(--secondary-shade);
 }
 
-/* Moderators + VIPs */
-.sender.mod,
-.sender.vip {
+/* Moderators */
+.sender.mod {
 	background-color: var(--ternary-glare);
 	color: black;
 	font-weight: 800;
 }
 
-/* Subscribers */
-.sender.subscriber {
+/* Subscribers + VIPs */
+.sender.subscriber,
+.sender.vip {
 	background-color: var(--primary-glare);
 }
 
