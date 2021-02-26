@@ -1,3 +1,3 @@
 module.exports = {
-	title: `Building Accessible SVG Icons in React with Chantastic`
+	title: `Let's Build a Style Stage Theme with Stephanie Eckles!`
 }
