@@ -1,3 +1,3 @@
 module.exports = {
-	title: `Let's Build a Style Stage Theme with Stephanie Eckles!`
+	title: `⭐ Let's Build a Progressively Enhanced Rating Widget!`
 }
