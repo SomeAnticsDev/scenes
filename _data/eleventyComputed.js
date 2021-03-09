@@ -1,3 +1,3 @@
 module.exports = {
-	title: `⭐ Let's Build a Progressively Enhanced Rating Widget!`
+	title: `🌟 Can We Build a Progressively Enhanced Rating Widget?`
 }
