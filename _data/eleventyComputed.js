@@ -1,3 +1,3 @@
 module.exports = {
-	title: `Specs, Tests, and Mocks with Randy Brown`
+	title: `Secrets of Accessible Routing with Anthony Campolo and Dom Saadi`
 }
