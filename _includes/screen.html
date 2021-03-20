@@ -21,9 +21,10 @@
 			</p>
 		</header>
 	</div>
-	<div id="right">
+	<div id="right" {% if throuple %}class="throuple"{% endif %}>
 		<section class="camera"></section>
 		{% if pair %}<section class="camera"></section>{% endif %}
+		{% if throuple %}<section class="camera"></section>{% endif %}
 		<section id="chat">
 			<ul></ul>
 		</section>

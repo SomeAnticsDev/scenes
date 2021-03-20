@@ -97,6 +97,14 @@ img[alt="Twitter"] {
 	height: 336px;
 }
 
-.camera + .camera {
+.throuple .camera {
+	height: 270px;
+}
+
+.camera:nth-child(2) {
 	background-color: darkkhaki;
+}
+
+.camera:nth-child(3) {
+	background-color: aquamarine;
 }
