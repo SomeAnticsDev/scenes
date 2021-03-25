@@ -150,6 +150,16 @@
 			chatbox.appendChild(eventNotice);
 		}
 
+		ComfyJS.onCommand = (user, command, message, flags, extra) => {
+			if (command === 'tuna') {
+				let tuna = document.querySelector('#tunas img');
+				tuna.classList.add('active');
+				setTimeout(() => {
+					tuna.classList.remove('active');
+				}, 7000);
+			}
+		}
+
 		ComfyJS.Init('SomeAnticsDev');
 	</script>
 </body>
