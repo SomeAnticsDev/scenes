@@ -32,6 +32,7 @@ body::-webkit-scrollbar {
 body {
 	display: grid;
 	grid-template-columns: 1456px 464px;
+	overflow-y: hidden;
 }
 
 #left {
@@ -42,6 +43,7 @@ body {
 #right {
 	display: flex;
 	flex-direction: column;
+	z-index: 99999;
 }
 
 #screen {
@@ -50,6 +52,7 @@ body {
 
 header {
 	background: linear-gradient(-45deg,var(--primary-glare),var(--primary-glare) 30%,var(--primary) 30%,var(--primary) 100%);
+	/* z-index: 1; */
 }
 
 h1 {

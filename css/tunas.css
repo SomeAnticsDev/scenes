@@ -1,0 +1,16 @@
+#tunas {
+	position: absolute;
+}
+
+#tunas img {
+	position: relative;
+	margin-left: 900px;
+	margin-top: 1100px;
+	width: 500px;
+	right: 0;
+	transition: 3s margin-top ease-in-out;
+}
+
+#tunas img.active {
+	margin-top: 700px;
+}
