@@ -41,6 +41,7 @@
 	<script>
 		{% comment %} VARIABLES {% endcomment %}
 		let boring = false;
+		let maximumTunas = 3;
 
 		function htmlEntities(html) {
 			function it() {
@@ -171,9 +172,16 @@
 				boring = false;
 			}
 
+			if ((isBroadcaster || isMod) && command === 'maxtunas') {
+				if (Number.parseInt(message)) {
+					let requestedMaximumTunas = Number.parseInt(message);
+					maximumTunas = Math.min(Math.max(0, requestedMaximumTunas), document.querySelectorAll('#tunas img').length);
+				}
+			}
+
 			if (!boring && command === 'tuna') {
 				let activeTunas = document.querySelectorAll('#tunas img.active');
-				let tooManyTunas = activeTunas.length >= 3;
+				let tooManyTunas = activeTunas.length >= maximumTunas;
 
 				if (!tooManyTunas) {
 					let viableTunas = document.querySelectorAll('#tunas img:not(.active)');
