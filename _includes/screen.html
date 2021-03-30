@@ -42,6 +42,7 @@
 		{% comment %} VARIABLES {% endcomment %}
 		let boring = false;
 		let maximumTunas = 3;
+		let latestSender = '';
 
 		function htmlEntities(html) {
 			function it() {
@@ -107,9 +108,13 @@
 
 			// Format message
 			const messageContents = document.createElement('p');
+			messageContents.classList.add('message');
 			messageContents.innerHTML = formatEmotes(message, extra.messageEmotes);
 
-			newMessage.appendChild(sender);
+			if (user !== latestSender) {
+				latestSender = user;
+				newMessage.appendChild(sender);
+			}
 			newMessage.appendChild(messageContents);
 			newMessage.id = extra.id;
 
@@ -126,6 +131,7 @@
 		}
 
 		ComfyJS.onSub = (user, message, subTierInfo, extra) => {
+			latestSender = '';
 			const eventNotice = document.createElement('li');
 			eventNotice.classList.add('event', 'sub');
 			eventNotice.innerHTML = `<span class="event-user">${user}</span> subscribed!`;
@@ -139,6 +145,7 @@
 		}
 
 		ComfyJS.onResub = (user, message, streamMonths, cumulativeMonths, subTierInfo, extra) => {
+			latestSender = '';
 			console.log({user, message, streamMonths, cumulativeMonths, subTierInfo, extra})
 			const eventNotice = document.createElement('li');
 			eventNotice.classList.add('event', 'sub');
@@ -151,6 +158,7 @@
 		}
 
 		ComfyJS.onRaid = (user, viewers, extra) => {
+			latestSender = '';
 			console.log({user, viewers, extra});
 			const eventNotice = document.createElement('li');
 			eventNotice.classList.add('event', 'raid');
