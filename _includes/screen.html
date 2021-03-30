@@ -39,6 +39,9 @@
 		<img src="/assets/casually-grumpy-boi.png" id="tuna6" alt="" />
 	</div>
 	<script>
+		{% comment %} VARIABLES {% endcomment %}
+		let boring = false;
+
 		function htmlEntities(html) {
 			function it() {
 				return html.map(function(n, i, arr) {
@@ -156,7 +159,19 @@
 		}
 
 		ComfyJS.onCommand = (user, command, message, flags, extra) => {
-			if (command === 'tuna') {
+			let isBroadcaster = flags.broadcaster;
+			let isMod = flags.mod;
+
+			if ((isBroadcaster || isMod) && command === 'boring') {
+				boring = true;
+				document.querySelectorAll('#tunas img.active').forEach(tuna => tuna.classList.remove('active'));
+			}
+
+			if ((isBroadcaster || isMod) && command === 'fun') {
+				boring = false;
+			}
+
+			if (!boring && command === 'tuna') {
 				let activeTunas = document.querySelectorAll('#tunas img.active');
 				let tooManyTunas = activeTunas.length >= 3;
 
