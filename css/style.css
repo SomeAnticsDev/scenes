@@ -47,7 +47,8 @@ body {
 }
 
 #screen {
-	background-color: tomato;
+	/* background-color: tomato; */
+	background-color: transparent;
 }
 
 header {
