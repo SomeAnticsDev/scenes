@@ -49,3 +49,14 @@
 #tuna4.active {
 	margin-top: -50px;
 }
+
+#tuna5 {
+	width: 120px;
+	margin-left: -120px;
+	margin-top: 600px;
+	filter: brightness(1.2) saturate(0.65);
+}
+
+#tuna5.active {
+	margin-left: -12px;
+}
