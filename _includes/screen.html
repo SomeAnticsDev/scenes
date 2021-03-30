@@ -157,11 +157,18 @@
 
 		ComfyJS.onCommand = (user, command, message, flags, extra) => {
 			if (command === 'tuna') {
-				let tuna = document.querySelector('#tunas img');
-				tuna.classList.add('active');
-				setTimeout(() => {
-					tuna.classList.remove('active');
-				}, 7000);
+				let activeTunas = document.querySelectorAll('#tunas img.active');
+				let tooManyTunas = activeTunas.length >= 3;
+
+				if (!tooManyTunas) {
+					let viableTunas = document.querySelectorAll('#tunas img:not(.active)');
+					let tunaIndex = Math.floor(Math.random() * viableTunas.length);
+					let tuna = viableTunas[tunaIndex];
+					tuna.classList.add('active');
+					setTimeout(() => {
+						tuna.classList.remove('active');
+					}, 7000);
+				}
 			}
 		}
 
