@@ -97,7 +97,8 @@ img[alt="Twitter"] {
 }
 
 .camera {
-	background-color: violet;
+	/* background-color: violet; */
+	background-color: transparent;
 	height: 336px;
 }
 
@@ -106,9 +107,11 @@ img[alt="Twitter"] {
 }
 
 .camera:nth-child(2) {
-	background-color: darkkhaki;
+	/* background-color: darkkhaki; */
+	background-color: transparent;
 }
 
 .camera:nth-child(3) {
-	background-color: aquamarine;
+	/* background-color: aquamarine; */
+	background-color: transparent;
 }
