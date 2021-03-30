@@ -4,7 +4,8 @@
 
 #tunas img {
 	position: absolute;
-	transition: 3s all ease-in-out;
+	transition: 3s all ease-out;
+	filter: drop-shadow(2px 2px 2px black);
 }
 
 #tuna1 {
@@ -59,4 +60,15 @@
 
 #tuna5.active {
 	margin-left: -12px;
+}
+
+#tuna6 {
+	width: 375px;
+	z-index: 2;
+	margin-top: 1100px;
+	margin-left: 300px;
+}
+
+#tuna6.active {
+	margin-top: 825px;
 }
