@@ -7,6 +7,7 @@
 	<script src="https://cdn.jsdelivr.net/npm/comfy.js@latest/dist/comfy.min.js"></script>
 	<link rel="stylesheet" href="/css/style.css" />
 	<link rel="stylesheet" href="/css/chat.css" />
+	<link rel="stylesheet" href="/css/tunas.css" />
 </head>
 <body>
 	<div id="left">
@@ -29,7 +30,18 @@
 			<ul></ul>
 		</section>
 	</div>
+	<div id="tunas">
+		<img src="/assets/tuna.png" id="tuna1" alt="" />
+		<img src="/assets/tuna-from-front.png" id="tuna2" alt="" />
+		<img src="/assets/majestic-boi.png" id="tuna3" alt="" />
+		<img src="/assets/ceiling-tuna.png" id="tuna4" alt="" />
+		<img src="/assets/monitor-boi.png" id="tuna5" alt="" />
+		<img src="/assets/casually-grumpy-boi.png" id="tuna6" alt="" />
+	</div>
 	<script>
+		{% comment %} VARIABLES {% endcomment %}
+		let boring = false;
+
 		function htmlEntities(html) {
 			function it() {
 				return html.map(function(n, i, arr) {
@@ -144,6 +156,35 @@
 			const viewerCount = (viewers === 1) ? '1 viewer' : `${viewers} viewers`;
 			eventNotice.innerHTML = `<span class="event-user">${user}</span> is raiding with ${viewerCount}!`;
 			chatbox.appendChild(eventNotice);
+		}
+
+		ComfyJS.onCommand = (user, command, message, flags, extra) => {
+			let isBroadcaster = flags.broadcaster;
+			let isMod = flags.mod;
+
+			if ((isBroadcaster || isMod) && command === 'boring') {
+				boring = true;
+				document.querySelectorAll('#tunas img.active').forEach(tuna => tuna.classList.remove('active'));
+			}
+
+			if ((isBroadcaster || isMod) && command === 'fun') {
+				boring = false;
+			}
+
+			if (!boring && command === 'tuna') {
+				let activeTunas = document.querySelectorAll('#tunas img.active');
+				let tooManyTunas = activeTunas.length >= 3;
+
+				if (!tooManyTunas) {
+					let viableTunas = document.querySelectorAll('#tunas img:not(.active)');
+					let tunaIndex = Math.floor(Math.random() * viableTunas.length);
+					let tuna = viableTunas[tunaIndex];
+					tuna.classList.add('active');
+					setTimeout(() => {
+						tuna.classList.remove('active');
+					}, 7000);
+				}
+			}
 		}
 
 		ComfyJS.Init('SomeAnticsDev');

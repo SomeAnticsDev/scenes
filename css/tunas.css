@@ -1,0 +1,74 @@
+#tunas {
+	position: absolute;
+}
+
+#tunas img {
+	position: absolute;
+	transition: 3s all ease-out;
+	filter: drop-shadow(2px 2px 2px black);
+}
+
+#tuna1 {
+	margin-top: 950px;
+	margin-left: 900px;
+	width: 300px;
+}
+
+#tuna1.active {
+	margin-top: 750px;
+}
+
+#tuna2 {
+	height: 300px;
+	margin-top: 275px;
+	margin-left: -200px;
+	transform: rotateZ(20deg);
+}
+
+#tuna2.active {
+	margin-left: -75px;
+}
+
+#tuna3 {
+	width: 150px;
+	margin-top: 20px;
+	margin-left: 1525px;
+	transform: rotateZ(-30deg);
+}
+
+#tuna3.active {
+	margin-left: 1375px;
+}
+
+#tuna4 {
+	width: 125px;
+	transform: rotateX(180deg) rotateZ(10deg);
+	margin-left: 450px;
+	margin-top: -215px;
+}
+
+#tuna4.active {
+	margin-top: -50px;
+}
+
+#tuna5 {
+	width: 120px;
+	margin-left: -120px;
+	margin-top: 600px;
+	filter: brightness(1.2) saturate(0.65);
+}
+
+#tuna5.active {
+	margin-left: -12px;
+}
+
+#tuna6 {
+	width: 375px;
+	z-index: 2;
+	margin-top: 1100px;
+	margin-left: 300px;
+}
+
+#tuna6.active {
+	margin-top: 825px;
+}
