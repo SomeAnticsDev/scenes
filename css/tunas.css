@@ -38,3 +38,14 @@
 #tuna3.active {
 	margin-left: 1375px;
 }
+
+#tuna4 {
+	width: 125px;
+	transform: rotateX(180deg) rotateZ(10deg);
+	margin-left: 450px;
+	margin-top: -215px;
+}
+
+#tuna4.active {
+	margin-top: -50px;
+}
