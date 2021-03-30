@@ -1,3 +1,3 @@
 module.exports = {
-	title: `Secrets of Accessible Routing with Dom Saadi and Anthony Campolo`
+	title: `Let's Dive into the GOV.UK Design System with Chris Burns`
 }
