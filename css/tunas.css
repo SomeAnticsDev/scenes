@@ -19,7 +19,7 @@
 
 #tuna2 {
 	height: 300px;
-	margin-top: 75px;
+	margin-top: 275px;
 	margin-left: -200px;
 	transform: rotateZ(20deg);
 }
@@ -29,5 +29,12 @@
 }
 
 #tuna3 {
-	display: none;
+	width: 150px;
+	margin-top: 20px;
+	margin-left: 1525px;
+	transform: rotateZ(-30deg);
+}
+
+#tuna3.active {
+	margin-left: 1375px;
 }
