@@ -179,11 +179,12 @@
 				}
 			}
 
-			if (!boring && command === 'tuna') {
+			if (command === 'tuna') {
 				let activeTunas = document.querySelectorAll('#tunas img.active');
 				let tooManyTunas = activeTunas.length >= maximumTunas;
+				displayMessage(user, `!tuna ${message}`, flags, null, extra);
 
-				if (!tooManyTunas) {
+				if (!boring && !tooManyTunas) {
 					let viableTunas = document.querySelectorAll('#tunas img:not(.active)');
 					let tunaIndex = Math.floor(Math.random() * viableTunas.length);
 					let tuna = viableTunas[tunaIndex];
