@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="/css/style.css" />
 	<link rel="stylesheet" href="/css/chat.css" />
 	<link rel="stylesheet" href="/css/tunas.css" />
+	<link rel="stylesheet" href="/css/chanthink.css" />
 </head>
 <body>
 	<div id="left">
@@ -37,6 +38,9 @@
 		<img src="/assets/ceiling-tuna.png" id="tuna4" alt="" />
 		<img src="/assets/monitor-boi.png" id="tuna5" alt="" />
 		<img src="/assets/casually-grumpy-boi.png" id="tuna6" alt="" />
+	</div>
+	<div id="chan">
+		<img src="/assets/chanthink.png" alt="" />
 	</div>
 	<script>
 		{% comment %} VARIABLES {% endcomment %}
@@ -174,6 +178,9 @@
 			if ((isBroadcaster || isMod) && command === 'boring') {
 				boring = true;
 				document.querySelectorAll('#tunas img.active').forEach(tuna => tuna.classList.remove('active'));
+				if (document.querySelector('#chan img.active')) {
+					document.querySelector('#chan img').classList.remove('active');
+				}
 			}
 
 			if ((isBroadcaster || isMod) && command === 'fun') {
@@ -199,6 +206,18 @@
 					tuna.classList.add('active');
 					setTimeout(() => {
 						tuna.classList.remove('active');
+					}, 7000);
+				}
+			}
+
+			if (command === 'chan') {
+				displayMessage(user, `!chan ${message}`, flags, null, extra);
+
+				if (!boring && document.querySelector('#chan img:not(.active)')) {
+					let chan = document.querySelector('#chan img');
+					chan.classList.add('active');
+					setTimeout(() => {
+						chan.classList.remove('active');
 					}, 7000);
 				}
 			}
