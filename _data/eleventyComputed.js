@@ -1,3 +1,3 @@
 module.exports = {
-	title: `Ask Me Anything About Accessibility!`
+	title: `Personalizing User Interfaces for Accessibility with Joe Lamyman`
 }
