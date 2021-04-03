@@ -1,0 +1,16 @@
+#chan {
+	position: absolute;
+}
+
+#chan img {
+	position: absolute;
+	transition: 3s all ease-out;
+	filter: drop-shadow(0px 0px 1px black);
+	width: 175px;
+	margin-left: 1282px;
+	margin-top: 920px;
+}
+
+#chan img.active {
+	margin-top: 737px;
+}
