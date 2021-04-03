@@ -178,6 +178,9 @@
 			if ((isBroadcaster || isMod) && command === 'boring') {
 				boring = true;
 				document.querySelectorAll('#tunas img.active').forEach(tuna => tuna.classList.remove('active'));
+				if (document.querySelector('#chan img.active')) {
+					document.querySelector('#chan img').classList.remove('active');
+				}
 			}
 
 			if ((isBroadcaster || isMod) && command === 'fun') {
@@ -203,6 +206,18 @@
 					tuna.classList.add('active');
 					setTimeout(() => {
 						tuna.classList.remove('active');
+					}, 7000);
+				}
+			}
+
+			if (command === 'chan') {
+				displayMessage(user, `!chan ${message}`, flags, null, extra);
+
+				if (!boring && document.querySelector('#chan img:not(.active)')) {
+					let chan = document.querySelector('#chan img');
+					chan.classList.add('active');
+					setTimeout(() => {
+						chan.classList.remove('active');
 					}, 7000);
 				}
 			}
