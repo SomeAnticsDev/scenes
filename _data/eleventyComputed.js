@@ -1,3 +1,3 @@
 module.exports = {
-	title: `Writing Tests First with Adrianne Mallett`
+	title: `Accessible Design Systems with Ashlae Nelms`
 }
