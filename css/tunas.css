@@ -15,7 +15,7 @@
 }
 
 #tuna1.active {
-	margin-top: 750px;
+	margin-top: 800px;
 }
 
 #tuna2 {
@@ -32,12 +32,12 @@
 #tuna3 {
 	width: 150px;
 	margin-top: 20px;
-	margin-left: 1525px;
+	margin-left: 1580px;
 	transform: rotateZ(-30deg);
 }
 
 #tuna3.active {
-	margin-left: 1375px;
+	margin-left: 1430px;
 }
 
 #tuna4 {
@@ -63,12 +63,12 @@
 }
 
 #tuna6 {
-	width: 375px;
+	width: 325px;
 	z-index: 2;
 	margin-top: 1100px;
 	margin-left: 300px;
 }
 
 #tuna6.active {
-	margin-top: 825px;
+	margin-top: 865px;
 }
