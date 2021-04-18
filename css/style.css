@@ -31,13 +31,15 @@ body::-webkit-scrollbar {
 
 body {
 	display: grid;
-	grid-template-columns: 1456px 464px;
+	/* grid-template-columns: 1456px 464px; */
+	grid-template-columns: 1529px 391px;
 	overflow-y: hidden;
 }
 
 #left {
 	display: grid;
-	grid-template-rows: 910px 170px;
+	/* grid-template-rows: 910px 170px; */
+	grid-template-rows: 955px 125px;
 }
 
 #right {
