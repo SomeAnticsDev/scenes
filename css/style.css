@@ -100,7 +100,8 @@ img[alt="Twitter"] {
 
 .camera {
 	background-color: var(--primary);
-	height: 336px;
+	/* height: 336px; */
+	height: 283px;
 }
 
 .throuple .camera {
