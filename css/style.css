@@ -51,6 +51,8 @@ body {
 }
 
 header {
+	/* background: url('https://res.cloudinary.com/bendmyers/image/upload/v1619896651/backlit_thumbnail_dzmjac.png') no-repeat;
+	background-size: 100%; */
 	background: linear-gradient(-45deg,var(--primary-glare),var(--primary-glare) 30%,var(--primary) 30%,var(--primary) 100%);
 	z-index: 1;
 }
