@@ -221,6 +221,10 @@
 					}, 7000);
 				}
 			}
+
+			if (command === 'jump') {
+				displayMessage(user, `!jump ${message}`, flags, null, extra);
+			}
 		}
 
 		ComfyJS.Init('SomeAnticsDev');
