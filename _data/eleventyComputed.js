@@ -1,3 +1,3 @@
 module.exports = {
-	title: `Twitch Plays That One Dinosaur Game`
+	title: `Accessible Tabs in React with Chance Strickland`
 }
