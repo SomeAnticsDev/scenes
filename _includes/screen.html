@@ -20,6 +20,12 @@
 				<span class="twitter-username">
 					<span class="at">@</span>SomeAnticsDev
 				</span>
+
+				{% for guestTwitter in guestTwitters %}
+				<span class="twitter-username">
+					<span class="at">@</span>{{ guestTwitter }}
+				</span>
+				{% endfor %}
 			</p>
 		</header>
 	</div>

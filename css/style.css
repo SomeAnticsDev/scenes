@@ -87,6 +87,16 @@ p.twitter-handle .at {
 	margin-right: 0.05em;
 }
 
+.twitter-username {
+	padding-right: 1em;
+}
+
+.twitter-username + .twitter-username::before {
+	content: '·';
+	font-size: 20px;
+	padding-right: 0.85em;
+}
+
 .twitter-logo {
 	height: 2.2em;
 }
