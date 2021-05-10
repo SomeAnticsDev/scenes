@@ -1,3 +1,3 @@
 module.exports = {
-	title: `Accessible Tabs in React with Chance Strickland`
+	title: `Building Accessible Tabs in React with Chance Strickland`
 }

@@ -1,5 +1,6 @@
 #chat {
-	background-color: var(--primary-shade);
+	/* background-color: var(--primary-shade); */
+	background-color: var(--primary-harsh);
 	color: white;
 	font-family: Nexa, Verdana, sans-serif;
 	height: 797px;
