@@ -137,7 +137,8 @@
 		ComfyJS.onMessageDeleted = (id, extra) => {
 			let deletedMessage = document.getElementById(id);
 			if (deletedMessage) {
-				deletedMessage.remove();
+				deletedMessage.classList.remove('show');
+				setTimeout(() => deletedMessage.remove(), 500);
 			}
 		}
 
