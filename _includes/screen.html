@@ -129,6 +129,7 @@
 			newMessage.id = extra.id;
 
 			chatbox.appendChild(newMessage);
+			setTimeout(() => newMessage.classList.add('show'), 10);
 		}
 
 		ComfyJS.onChat = displayMessage;
