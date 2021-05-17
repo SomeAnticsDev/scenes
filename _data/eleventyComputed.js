@@ -1,6 +1,6 @@
 module.exports = {
-	title: `Building Accessible Tabs in React with Chance Strickland`,
+	title: `Getting Started with Automated Accessibility Testing with Lucia Cerchie`,
 	guestTwitters: [
-		'chancethedev'
+		'CerchieLucia'
 	]
 }

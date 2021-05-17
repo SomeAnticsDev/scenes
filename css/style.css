@@ -88,13 +88,13 @@ p.twitter-handle .at {
 }
 
 .twitter-username {
-	padding-right: 1em;
+	padding-right: 0.75em;
 }
 
 .twitter-username + .twitter-username::before {
 	content: '·';
 	font-size: 20px;
-	padding-right: 0.85em;
+	padding-right: 0.5em;
 }
 
 .twitter-logo {
