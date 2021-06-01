@@ -1,5 +1,5 @@
 module.exports = {
-	title: `Let's Build an Open Source Web Accessibility Resource!`,
+	title: `The Beginner's Guide to PostgreSQL with Sarah Beardsley`,
 	guestTwitters: [
 		
 	]
