@@ -1,6 +1,6 @@
 module.exports = {
-	title: `The Beginner's Guide to PostgreSQL`,
+	title: `Let's Build a UI with Figma, with Martin Bavio`,
 	guestTwitters: [
-		
+		'_marbiano'
 	]
 }
