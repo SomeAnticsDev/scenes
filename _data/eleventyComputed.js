@@ -1,8 +1,6 @@
 module.exports = {
-	// title: `Let's Build a UI with Figma, with Martin Bavio`,
-	title: `Let's Clone GitHub's Navigation Widget with Chantastic`,
+	title: `Let's Build a UI in Figma with Martin Bavio`,
 	guestTwitters: [
-		// '_marbiano'
-		'chantastic'
+		'_marbiano'
 	]
 }
