@@ -85,6 +85,7 @@
 	font-weight: 500;
 	line-height: 1.25em;
 	font-family: Inter, Verdana, sans-serif;
+	max-width: 42ch;
 }
 
 .emote {
