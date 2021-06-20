@@ -1,0 +1,144 @@
+@font-face{
+	/* // font-family:"Nexa Extra Light"; */
+	font-family: "Nexa";
+	font-style: normal;
+	font-weight: 200;
+	src: url("./fonts/Nexa/5936795/6f2c1b55-ac46-45b7-b796-899feb039db8.woff2") format("woff2"),url("./fonts/Nexa/5936795/2016195e-6bce-423c-bfd0-a5691b6534d1.woff") format("woff");
+	font-display: swap;
+}
+@font-face{
+	/* // font-family:"Nexa Extra Light Italic"; */
+	font-family: "Nexa";
+	font-style: italic;
+	font-weight: 200;
+	src:url("./fonts/Nexa/5936797/35eb42ce-b522-4e62-951f-c98f0062967f.woff2") format("woff2"),url("./fonts/Nexa/5936797/c90b3a66-6e5d-4fcb-8022-c073d5fa3e0a.woff") format("woff");
+	font-display: swap;
+}
+@font-face{
+	/* // font-family:"Nexa Thin"; */
+	font-family: "Nexa";
+	font-style: normal;
+	font-weight: 100;
+	src:url("./fonts/Nexa/5936799/b5d814bd-3a20-46b5-b0be-e67aafab7efd.woff2") format("woff2"),url("./fonts/Nexa/5936799/20f07ee2-917b-447a-89f7-a4dc2a9b9bd6.woff") format("woff");
+	font-display: swap;
+}
+@font-face{
+	/* // font-family:"Nexa Book Italic"; */
+	font-family: "Nexa";
+	font-style: italic;
+	font-weight: 300;
+	src:url("./fonts/Nexa/5936911/850e18e1-c80b-4f47-906d-173a1675454d.woff2") format("woff2"),url("./fonts/Nexa/5936911/0920c5b6-af44-4bef-b4ec-bb02baf0f51a.woff") format("woff");
+	font-display: swap;
+}
+@font-face{
+	/* // font-family:"Nexa Light Italic"; */
+	font-family: "Nexa";
+	font-style: italic;
+	font-weight: 200;
+	src:url("./fonts/Nexa/5936918/723a4a87-76cb-44a0-9e18-7ac8028c6312.woff2") format("woff2"),url("./fonts/Nexa/5936918/d1239852-7e00-4ec4-9543-5cf71aa6f0f3.woff") format("woff");
+	font-display: swap;
+}
+@font-face{
+	/* // font-family:"Nexa Light"; */
+	font-family: "Nexa";
+	font-style: normal;
+	font-weight: 200;
+	src:url("./fonts/Nexa/5936925/23f4b2ed-cde9-4afc-9b00-d64da5218eeb.woff2") format("woff2"),url("./fonts/Nexa/5936925/4ccf6369-aef1-4a78-a142-c424dc20e0c4.woff") format("woff");
+	font-display: swap;
+}
+@font-face{
+	/* // font-family:"Nexa Book"; */
+	font-family: "Nexa";
+	font-style: normal;
+	font-weight: 300;
+	src:url("./fonts/Nexa/5936947/d86297a5-3da2-46ff-8f30-1e2be7ff9a0c.woff2") format("woff2"),url("./fonts/Nexa/5936947/20c45804-1aa3-49e9-9415-eec7b3dee68a.woff") format("woff");
+	font-display: swap;
+}
+@font-face{
+	/* // font-family:"Nexa Bold Italic"; */
+	font-family: "Nexa";
+	font-style: italic;
+	font-weight: 600;
+	src:url("./fonts/Nexa/5936954/09c63154-6f7e-4f64-b413-4f988a6234de.woff2") format("woff2"),url("./fonts/Nexa/5936954/ef1beda6-b29f-4d5f-9726-1371e53ae225.woff") format("woff");
+	font-display: swap;
+}
+@font-face{
+	/* // font-family:"Nexa Bold"; */
+	font-family: "Nexa";
+	font-style: normal;
+	font-weight: 600;
+	src:url("./fonts/Nexa/5936963/1b920530-d311-452f-9645-e6bf4bb204c2.woff2") format("woff2"),url("./fonts/Nexa/5936963/beb66147-d106-479f-bd7f-b52fa11bf1b0.woff") format("woff");
+	font-display: swap;
+}
+@font-face{
+	/* // font-family:"Nexa Heavy Italic"; */
+	font-family: "Nexa";
+	font-style: italic;
+	font-weight: 800;
+	src:url("./fonts/Nexa/5936969/f13dfea2-14ab-4c8f-818d-fb47235f99d6.woff2") format("woff2"),url("./fonts/Nexa/5936969/fbec8aba-f7df-471e-96a6-4630b673e186.woff") format("woff");
+	font-display: swap;
+}
+@font-face{
+	/* // font-family:"Nexa Heavy"; */
+	font-family: "Nexa";
+	font-style: normal;
+	font-weight: 800;
+	src:url("./fonts/Nexa/5936976/6529c9d3-e9c3-4b5b-a99f-7f78ed031cd1.woff2") format("woff2"),url("./fonts/Nexa/5936976/a3dcc660-c665-4909-8539-83f098704f2c.woff") format("woff");
+	font-display: swap;
+}
+@font-face{
+	/* // font-family:"Nexa Black Italic"; */
+	font-family: "Nexa";
+	font-style: italic;
+	font-weight: 900;
+	src:url("./fonts/Nexa/5936986/9f9ba706-82b1-4427-ae84-f9d199f1923c.woff2") format("woff2"),url("./fonts/Nexa/5936986/49c1c11e-6fcd-4658-aafc-e7ae1ac44a5f.woff") format("woff");
+	font-display: swap;
+}
+@font-face{
+	/* // font-family:"Nexa Black"; */
+	font-family: "Nexa";
+	font-style: normal;
+	font-weight: 900;
+	src:url("./fonts/Nexa/5937017/ae8b9d61-1981-4f8a-9f8a-a0989e210598.woff2") format("woff2"),url("./fonts/Nexa/5937017/57cc0b4a-f0f4-4d9f-9bce-dc75fd70582f.woff") format("woff");
+	font-display: swap;
+}
+@font-face{
+	/* // font-family:"Nexa Extra Bold Italic"; */
+	font-family: "Nexa";
+	font-style: italic;
+	font-weight: 700;
+	src:url("./fonts/Nexa/5937029/bc08090d-98de-4823-9da5-f97c5ca18f21.woff2") format("woff2"),url("./fonts/Nexa/5937029/b3455d0e-d5b6-4728-b8f2-a87e8cea09d8.woff") format("woff");
+	font-display: swap;
+}
+@font-face{
+	/* // font-family:"Nexa Regular Italic"; */
+	font-family: "Nexa";
+	font-style: italic;
+	font-weight: 400;
+	src:url("./fonts/Nexa/5937046/8dbd9852-63e5-49f3-8186-9c94550ea885.woff2") format("woff2"),url("./fonts/Nexa/5937046/8b8ab1ba-6572-4a29-8934-3ab88ae34205.woff") format("woff");
+	font-display: swap;
+}
+@font-face{
+	/* // font-family:"Nexa Extra Bold"; */
+	font-family: "Nexa";
+	font-style: normal;
+	font-weight: 700;
+	src:url("./fonts/Nexa/5937056/0b628069-508f-4609-ad72-0b35f59d2494.woff2") format("woff2"),url("./fonts/Nexa/5937056/e8120e51-1633-4e70-96f2-444ea56be500.woff") format("woff");
+	font-display: swap;
+}
+@font-face{
+	/* // font-family:"Nexa Regular"; */
+	font-family: "Nexa";
+	font-style: normal;
+	font-weight: 400;
+	src:url("./fonts/Nexa/5937060/14c2540d-2c31-4e55-9124-62a04f793f87.woff2") format("woff2"),url("./fonts/Nexa/5937060/f5f48fc0-38ca-47aa-942c-3f1d266d9b20.woff") format("woff");
+	font-display: swap;
+}
+@font-face{
+	/* // font-family:"Nexa Thin Italic"; */
+	font-family: "Nexa";
+	font-style: italic;
+	font-weight: 100;
+	src:url("./fonts/Nexa/5937066/fc02735a-cc6e-4e1b-b834-83cea7ff9089.woff2") format("woff2"),url("./fonts/Nexa/5937066/703cce45-9a9b-48d8-b1bd-8504a8ad4c68.woff") format("woff");
+	font-display: swap;
+}
