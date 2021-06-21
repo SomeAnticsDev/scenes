@@ -1,6 +1,6 @@
 module.exports = {
-	title: `Let's Build a UI in Figma with Martin Bavio`,
+	title: `Accessible WordPress Sites with Elementor, with Anne-Mieke Bovelett`,
 	guestTwitters: [
-		'_marbiano'
+		'Bovelett'
 	]
 }
