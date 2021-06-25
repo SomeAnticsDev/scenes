@@ -1,6 +1,6 @@
 module.exports = {
-	title: `Accessible WordPress Sites with Elementor, with Anne-Mieke Bovelett`,
+	title: `First Look at Eleventy Serverless`,
 	guestTwitters: [
-		'Bovelett'
+		// 'Bovelett'
 	]
 }
