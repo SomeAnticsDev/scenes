@@ -1,10 +1,19 @@
 #chat {
 	/* background-color: var(--primary-shade); */
-	background-color: var(--primary-harsh);
+	background: var(--primary-harsh);
+	background: url('https://res.cloudinary.com/bendmyers/image/upload/v1619896651/backlit_thumbnail_dzmjac.png') no-repeat;
+	background-size: cover;
 	color: white;
 	font-family: Nexa, Verdana, sans-serif;
 	height: 797px;
-	
+	overflow: hidden;
+}
+
+#chat .blur {
+	width: 100%;
+	height: 797px;
+	backdrop-filter: brightness(70%);
+
 	/* This stuff is the magic that lets us add new messages to the bottom and push the old messages up */
 	overflow: auto;
 	display: flex;
@@ -20,7 +29,7 @@
 	height: 330px !important;
 }
 
-#chat::-webkit-scrollbar {
+#chat ::-webkit-scrollbar {
 	display: none;
 }
 
