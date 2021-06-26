@@ -12,6 +12,7 @@ body::-webkit-scrollbar {
 	--primary: #4c1074;
 	--primary-glare: #743c9b;
 	--primary-light: #AA87C3;
+	--primary-lighter: #cfbcdc;
     --primary-soft: #EBE1F3;
     --primary-harsh: #1c0929;
     --primary-shade: #280241;
