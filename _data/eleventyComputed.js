@@ -1,6 +1,6 @@
 module.exports = {
-	title: `First Look at Eleventy Serverless`,
+	title: `Accessibility in 3D with React Three Fiber`,
 	guestTwitters: [
-		// 'Bovelett'
+		'ralex1993'
 	]
 }
