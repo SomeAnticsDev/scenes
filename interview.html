@@ -155,6 +155,7 @@
 			eventNotice.classList.add('event', 'sub');
 			eventNotice.innerHTML = `<span class="event-user">${user}</span> subscribed!`;
 			chatbox.appendChild(eventNotice);
+			setTimeout(() => eventNotice.classList.add('show'), 10);
 
 			console.log({user, message, subTierInfo, extra});
 
@@ -170,6 +171,7 @@
 			eventNotice.classList.add('event', 'sub');
 			eventNotice.innerHTML = `<span class="event-user">${user}</span> resubscribed!`;
 			chatbox.appendChild(eventNotice);
+			setTimeout(() => eventNotice.classList.add('show'), 10);
 
 			if (message) {
 				displayMessage(user, message, {subscriber: true}, false, extra);
@@ -184,6 +186,7 @@
 			const viewerCount = (viewers === 1) ? '1 viewer' : `${viewers} viewers`;
 			eventNotice.innerHTML = `<span class="event-user">${user}</span> is raiding with ${viewerCount}!`;
 			chatbox.appendChild(eventNotice);
+			setTimeout(() => eventNotice.classList.add('show'), 10);
 		}
 
 		ComfyJS.onCommand = (user, command, message, flags, extra) => {
