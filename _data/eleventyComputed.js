@@ -1,6 +1,6 @@
 module.exports = {
-	title: `Accessibility in 3D with React Three Fiber`,
+	title: `Vite and the Next Generation of Frontend Tooling`,
 	guestTwitters: [
-		'ralex1993'
+		'ajcwebdev'
 	]
 }
