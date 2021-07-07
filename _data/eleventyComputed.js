@@ -1,6 +1,7 @@
 module.exports = {
-	title: `Vite and the Next Generation of Frontend Tooling`,
+	title: `Making a Page Builder with Next.js, Storybook, and Prismic`,
 	guestTwitters: [
-		'ajcwebdev'
+		'TrostCodes',
+		'FrontendHorse'
 	]
 }
