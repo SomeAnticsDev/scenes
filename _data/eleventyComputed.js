@@ -1,7 +1,6 @@
 module.exports = {
-	title: `Making a Page Builder with Next.js, Storybook, and Prismic`,
+	title: `Accessible Dialogs in React with Chance Strickland`,
 	guestTwitters: [
-		'TrostCodes',
-		'FrontendHorse'
+		'chancethedev'
 	]
 }
