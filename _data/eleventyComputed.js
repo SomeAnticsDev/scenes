@@ -1,6 +1,6 @@
 module.exports = {
-	title: `Accessible Dialogs in React with Chance Strickland`,
+	title: `Auditing Websites for Accessibility with Anna E. Cook`,
 	guestTwitters: [
-		'chancethedev'
+		'annaecook'
 	]
 }
