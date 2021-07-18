@@ -110,13 +110,15 @@
 			// Format sender
 			const sender = document.createElement('p');
 			sender.classList.add('sender');
-			let role;
-			if (flags.broadcaster || user === 'BenDMyers') role = 'broadcaster';
-			else if (flags.mod) role = 'mod';
-			else if (flags.vip) role = 'vip';
-			else if (flags.subscriber) role = 'subscriber';
+			let role = [];
+			if (flags.broadcaster || user === 'BenDMyers') role.push('broadcaster');
+			else {
+				if (flags.mod) role.push('mod');
+				if (flags.vip) role.push('vip');
+				if (flags.subscriber) role.push('subscriber');
+			}
 			
-			role && sender.classList.add(role);
+			sender.classList.add(...role);
 			sender.innerText = user;
 
 			// Format message
