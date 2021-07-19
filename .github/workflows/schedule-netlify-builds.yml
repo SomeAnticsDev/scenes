@@ -1,0 +1,15 @@
+name: Schedule Netlify Build
+on:
+  schedule:
+    # Customize schedule expression at crontab.guru
+    # This one runs at 11am GMT daily (5am CST, 6am CDT)
+    - cron: "0 11 * * *"
+jobs:
+  build:
+    name: Call Netlify build hook
+    runs-on: ubuntu-latest
+    steps:
+      - name: Curl request
+        env:
+          MORNING_BUILD_HOOK: ${{ secrets.MORNING_BUILD_HOOK }}
+        run: curl -X POST -d {} "$MORNING_BUILD_HOOK"
