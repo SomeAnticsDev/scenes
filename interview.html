@@ -185,7 +185,7 @@
 			console.log({user, viewers, extra});
 			const eventNotice = document.createElement('li');
 			eventNotice.classList.add('event', 'raid');
-			const viewerCount = (viewers === 1) ? '1 viewer' : `${viewers} viewers`;
+			const viewerCount = (viewers > 1) ? `${viewers} viewers` : '1 viewer';
 			eventNotice.innerHTML = `<span class="event-user">${user}</span> is raiding with ${viewerCount}!`;
 			chatbox.appendChild(eventNotice);
 			setTimeout(() => eventNotice.classList.add('show'), 10);
