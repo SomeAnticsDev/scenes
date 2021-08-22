@@ -187,6 +187,53 @@
 			setTimeout(() => eventNotice.classList.add('show'), 10);
 		}
 
+		let massGifter = '';
+
+		ComfyJS.onSubGift = (gifterUser, streakMonths, recipientUser, senderCount, methods, extra) => {
+			console.log({gifterUser, streakMonths, recipientUser, senderCount, methods, extra});
+			
+			// Prevent flood of popups when one person gifts many subs
+			if (gifterUser !== massGifter) {
+				latestSender = '';
+				const eventNotice = document.createElement('li');
+				eventNotice.classList.add('event', 'giftsub');
+
+				const gifter = (gifterUser === 'AnAnonymousGifter') ?
+					'An anonymous gifter' :
+					`<span class="event-user">${gifterUser}</span>`;
+
+				eventNotice.innerHTML = `${gifter} gifted a sub<br />to <span class="event-user">${recipientUser}</span>!`;
+				chatbox.appendChild(eventNotice);
+				setTimeout(() => eventNotice.classList.add('show'), 10);
+			}
+		}
+
+		ComfyJS.onSubMysteryGift = (gifterUser, numbOfSubs, senderCount, methods, extra) => {
+			console.log({gifterUser, numbOfSubs, senderCount, methods, extra});
+			
+			// If exactly one sub, let onSubGift handle it
+			if (numbOfSubs > 1) {
+				latestSender = '';
+				massGifter = gifterUser;
+				setTimeout(() => {
+					if (massGifter === gifterUser) {
+						massGifter = '';
+					}
+				}, 500);
+
+				const eventNotice = document.createElement('li');
+				eventNotice.classList.add('event', 'giftsub');
+	
+				const gifter = (gifterUser === 'AnAnonymousGifter') ?
+					'An anonymous gifter' :
+					`<span class="event-user">${gifterUser}</span>`;
+				
+				eventNotice.innerHTML = `${gifter} gifted<br />${numbOfSubs} subs!`;
+				chatbox.appendChild(eventNotice);
+				setTimeout(() => eventNotice.classList.add('show'), 10);
+			}
+		}
+
 		ComfyJS.onCommand = (user, command, message, flags, extra) => {
 			let isBroadcaster = flags.broadcaster;
 			let isMod = flags.mod;
