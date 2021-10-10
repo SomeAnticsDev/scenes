@@ -3,6 +3,7 @@
 	let boring = false;
 	let maximumTunas = 3;
 	let latestSender = '';
+	const jsConfetti = new JSConfetti();
 
 	function htmlEntities(html) {
 		function it() {
@@ -43,6 +44,14 @@
 		return htmlEntities(splitText).join('')
 	}
 
+	function launchTrexes() {
+		jsConfetti.addConfetti({
+			emojis: ['🦖'],
+			emojiSize: 130,
+			confettiNumber: 75
+		});
+	}
+	
 	const chatbox = document.querySelector('#chat ul');
 
 	/**
@@ -100,7 +109,10 @@
 		eventNotice.classList.add('event', 'sub');
 		eventNotice.innerHTML = `<span class="event-user">${user}</span> subscribed!`;
 		chatbox.appendChild(eventNotice);
-		setTimeout(() => eventNotice.classList.add('show'), 10);
+		setTimeout(() => {
+			eventNotice.classList.add('show');
+			launchTrexes();
+		}, 10);
 
 		console.log({user, message, subTierInfo, extra});
 
@@ -116,7 +128,10 @@
 		eventNotice.classList.add('event', 'sub');
 		eventNotice.innerHTML = `<span class="event-user">${user}</span> resubscribed!`;
 		chatbox.appendChild(eventNotice);
-		setTimeout(() => eventNotice.classList.add('show'), 10);
+		setTimeout(() => {
+			eventNotice.classList.add('show');
+			launchTrexes();
+		}, 10);
 
 		if (message) {
 			displayMessage(user, message, {subscriber: true}, false, extra);
@@ -138,6 +153,7 @@
 
 	ComfyJS.onSubGift = (gifterUser, streakMonths, recipientUser, senderCount, methods, extra) => {
 		console.log({gifterUser, streakMonths, recipientUser, senderCount, methods, extra});
+		launchTrexes();
 		
 		// Prevent flood of popups when one person gifts many subs
 		if (gifterUser !== massGifter) {
@@ -151,7 +167,9 @@
 
 			eventNotice.innerHTML = `${gifter} gifted a sub<br />to <span class="event-user">${recipientUser}</span>!`;
 			chatbox.appendChild(eventNotice);
-			setTimeout(() => eventNotice.classList.add('show'), 10);
+			setTimeout(() => {
+				eventNotice.classList.add('show');
+			}, 10);
 		}
 	}
 

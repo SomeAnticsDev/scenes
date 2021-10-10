@@ -91,11 +91,13 @@
 	line-height: 1.25em;
 	font-family: Inter, Verdana, sans-serif;
 	max-width: 42ch;
+	word-wrap: break-word;
 }
 
 .emote {
 	display: inline;
 	width: 1.5em;
+	margin-bottom: -0.3em;
 }
 
 .event {
@@ -114,4 +116,8 @@
 .event .event-user {
 	color: var(--ternary);
 	font-weight: 900;
+}
+
+canvas {
+	z-index: 99999999 !important;
 }
