@@ -102,23 +102,18 @@ p.twitter-handle .at {
 	height: 2.2em;
 }
 
+
 .camera {
-	/* background-image: url("https://res.cloudinary.com/bendmyers/image/upload/v1617492163/Some%20Antics%20Avatars/Michael%20Chan.jpg");
-	background-size: cover; */
-	background-color: var(--primary);
+	background-color: transparent;
 	height: 283px;
+}
+
+.camera:not(:first-of-type) {
+	border-top: 1px solid var(--primary);
 }
 
 .throuple .camera {
 	height: 250px;
-}
-
-.camera:nth-child(2) {
-	background-color: var(--primary-glare);
-}
-
-.camera:nth-child(3) {
-	background-color: var(--primary);
 }
 
 #interviews {
