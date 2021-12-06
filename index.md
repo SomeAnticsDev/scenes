@@ -5,6 +5,7 @@ Collection of browser sources for Some Antics scenes:
 ## Pre-Show
 
 * [Starting Soon](/starting-soon/)
+* [Countdown](/countdown/)
 
 ## On Air
 

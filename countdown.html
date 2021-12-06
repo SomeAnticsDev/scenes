@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Starting Soon</title>
+	<link rel="stylesheet" href="/css/fonts.css" />
+	<link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+	<style>
+		body {
+			background: url('https://res.cloudinary.com/bendmyers/image/upload/v1619896651/backlit_thumbnail_dzmjac.png') no-repeat;
+			background-size: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			border: solid 3px black;
+		}
+		
+		p {
+			font-size: 40pt;
+			font-style: italic;
+			font-family: Nexa, sans-serif;
+			font-weight: 300;
+			color: whitesmoke;
+			display: flex;
+			margin: 0 auto;
+		}
+
+		h1 {
+			/* font-size: 75pt; */
+			font-size: 200pt;
+			margin: 0;
+			margin-inline: auto;
+			margin-top: -0.25em;
+			font-variant-numeric: tabular-nums;
+		}
+
+		svg {
+			height: 1em;
+			margin-top: 0.3em;
+			animation: 10s rotating infinite linear;
+			/* display: block; */
+			/* height: 600px !important; */
+			
+		}
+
+		svg:first-of-type {
+			margin-inline-end: 0.5em;
+		}
+
+		svg:last-of-type {
+			margin-inline-start: 0.5em;
+		}
+
+		@keyframes rotating {
+			from {
+				transform: rotate(0deg);
+			}
+			to {
+				transform: rotate(360deg);
+			}
+		}
+	</style>
+	
+
+	<p>
+		{% include icons/logo.html %}
+		Some Antics is starting in
+		{% include icons/logo.html %}
+	</p>
+	<h1 data-start-time="{{ streamTime }}"></h1>
+
+	<script>
+		function displayTimeRemaining() {
+			if (Date.now() < startTime) {
+				let timeRemaining = startTime - Date.now();
+				let minutes = Math.floor(timeRemaining / 60000);
+				let seconds = ((timeRemaining % 60000) / 1000).toFixed(0);
+				if (seconds === '60') {
+					seconds = 0;
+					minutes++;
+				}
+				countdown.innerHTML = `${minutes}m ${seconds}s`;
+			} else {
+				countdown.innerHTML = `0m 0s`;
+			}
+		}
+		const countdown = document.querySelector('[data-start-time]');
+		const startTime = new Date(countdown.dataset.startTime);
+		displayTimeRemaining();
+		setInterval(displayTimeRemaining, 1000);
+	</script>
+</body>
+</html>
