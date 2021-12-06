@@ -24,8 +24,11 @@ module.exports = async () => {
 	const upcomingStreams = await fetch('https://someantics.dev/api/upcomingStreams.json').then(res => res.json());
 	const [nextStream] = upcomingStreams.events;
 
+	console.log(nextStream)
+
 	return {
 		title: nextStream.fullTitle || nextStream.title,
+		streamTime: nextStream.date,
 		guestTwitters: nextStream
 			.hosts
 			.filter(host => host.twitter && host.name !== 'Ben Myers')
