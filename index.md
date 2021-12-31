@@ -22,6 +22,10 @@ Collection of browser sources for Some Antics scenes:
 
 * [T-rex Confetti](/trexes/) – launches a barrage of T-rex emojis whenever anyone subscribes
 
+## Miscellaneous
+
+* [Snow](https://cdpn.io/bendmyers/fullpage/yLzMqwL)
+
 <style>
 	body {
 		font-family: sans-serif;
