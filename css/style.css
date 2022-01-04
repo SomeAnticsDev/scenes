@@ -149,6 +149,13 @@ p.twitter-handle .at {
 	box-shadow: 0 0 2rem 0.5rem #4C1074;
 }
 
-#interviews .camera:first-child {
+#interviews .camera.big {
+	width: calc(391px * 2.5);
+	height: calc(283px * 2.5);
+	background: radial-gradient(#00000033, #00000077);
+	box-shadow: 0 0 2rem 0.5rem #4C1074;
+}
+
+#interviews .camera:not(.big):first-child {
 	margin-right: 4em;
 }
