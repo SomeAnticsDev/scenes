@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Some Antics Scenes</title>
+	<script src="https://cdn.jsdelivr.net/npm/comfy.js@latest/dist/comfy.min.js"></script>
+	<link rel="stylesheet" href="/css/fonts.css" />
+	<link rel="stylesheet" href="/css/style.css" />
+	<link rel="stylesheet" href="/css/chat.css" />
+	<link rel="stylesheet" href="/css/tunas.css" />
+	<link rel="stylesheet" href="/css/chanthink.css" />
+</head>
+<body>
+	<div id="left">
+		<section id="interviews">
+			<div class="blur">
+				<div class="container">
+					<div class="camera"></div>
+				</div>
+			</div>
+		</section>
+		<header>
+			<h1>{{ title }}</h1>
+			<p class="twitter-handle">
+				{% include icons/twitter-logo.html %}
+				<span class="twitter-username">
+					<span class="at">@</span>SomeAnticsDev
+				</span>
+			</p>
+		</header>
+	</div>
+	<div id="right">
+		<section id="chat" style="height: 100vh">
+			<div class="blur" style="height: 100vh">
+				<ul></ul>
+			</div>
+		</section>
+	</div>
+	{% include overlays/tunas.html %}
+	{% include overlays/chan.html %}
+	{% include scripts/chat.html %}
+</body>
+</html>

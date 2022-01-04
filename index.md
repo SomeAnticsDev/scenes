@@ -10,6 +10,7 @@ Collection of browser sources for Some Antics scenes:
 ## On Air
 
 * [Interview](/interview/) — host and one guest's face
+* [Interview Solo](/interview-solo/) - host's face
 * [Solo](/solo/) – host's face in sidebar, main space for screenshare
 * [Pair](/pair/) – host and one guest's face in sidebar, main space for screenshare
 * [Throuple](/throuple/) – host and two guests' face in sidebar, main space for screenshare
