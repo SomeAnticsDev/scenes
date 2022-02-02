@@ -12,17 +12,18 @@
 	<script>
 		const jsConfetti = new JSConfetti();
 
-		function launch() {
+		function launch(amount = 30) {
 			jsConfetti.addConfetti({
 				emojis: ['🦖'],
 				emojiSize: 90,
-				confettiNumber: 50
+				confettiNumber: amount
 			});
 		}
 
 		ComfyJS.onSub = () => launch();
 		ComfyJS.onResub = () => launch();
 		ComfyJS.onSubGift = () => launch();
+		ComfyJS.onRaid = (_, viewers, _) => launch(Math.max(viewers, 10));
 
 		ComfyJS.Init('SomeAnticsDev');
 	</script>
