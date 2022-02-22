@@ -21,8 +21,14 @@ module.exports = async () => {
 	 * 		}[]
 	 * 	}}
 	 */
-	const upcomingStreams = await fetch('https://someantics.dev/api/upcomingStreams.json').then(res => res.json());
-	const [nextStream] = upcomingStreams.events;
+	// const upcomingStreams = await fetch('https://someantics.dev/api/upcomingStreams.json').then(res => res.json());
+	// const [nextStream] = upcomingStreams.events;
+
+	const nextStream = {
+		title: 'Dive Into Bedrock Layout with Travis Waith-Mair',
+		date: '2022-02-22T15:00:00.000',
+		hosts: [{name: 'Travis Waith-Mair', twitter: 'travisWaithMair'}]
+	}
 
 	console.log(nextStream)
 
