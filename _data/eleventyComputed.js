@@ -26,7 +26,7 @@ module.exports = async () => {
 
 	const nextStream = {
 		title: 'Dive Into Bedrock Layout with Travis Waith-Mair',
-		date: '2022-02-22T15:00:00.000',
+		date: '2022-02-22T14:00:00.000',
 		hosts: [{name: 'Travis Waith-Mair', twitter: 'travisWaithMair'}]
 	}
 
