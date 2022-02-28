@@ -22,9 +22,9 @@
 
 		// setInterval(() => launch(50), 1000);
 
-		ComfyJS.onSub = () => launch();
-		ComfyJS.onResub = () => launch();
-		ComfyJS.onSubGift = () => launch();
+		ComfyJS.onSub = launch;
+		ComfyJS.onResub = launch;
+		ComfyJS.onSubGift = launch;
 		ComfyJS.onRaid = (_, viewers) => launch(Math.max(viewers, 10));
 
 		ComfyJS.Init('SomeAnticsDev');
