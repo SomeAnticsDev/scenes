@@ -25,10 +25,10 @@ module.exports = async () => {
 	// const [nextStream] = upcomingStreams.events;
 
 	const nextStream = {
-		title: `Let's Build a ShowMy.Chat Theme with Alex Trost!`,
+		title: `Accessibility in Responsive Design with Jim Drury`,
 		// date: '2022-02-22T14:00:00.000',
-		date: '2022-03-01T15:00:00.000',
-		hosts: [{name: 'Alex Trost', twitter: 'trostcodes'}]
+		date: '2022-03-04T14:00:00.000',
+		hosts: [{name: 'Jim Drury', twitter: 'jim_drury'}]
 	}
 
 	console.log(nextStream)
