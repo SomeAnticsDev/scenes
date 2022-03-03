@@ -14,26 +14,7 @@
 <body>
 	<div id="left">
 		<section id="screen"></section>
-		<header>
-			<h1>{{ title }}</h1>
-			<p class="twitter-handle">
-				{% include icons/twitter-logo.html %}
-				<span class="twitter-username">
-					<span class="at">@</span>SomeAnticsDev
-				</span>
-
-				<!-- {% for guestTwitter in guestTwitters %} -->
-				<!-- <span class="twitter-username"> -->
-					<!-- <span class="at">@</span>{{ guestTwitter }} -->
-				<!-- </span> -->
-				<!-- {% endfor %} -->
-
-				{% include icons/twitch-logo.html %}
-				<span class="twitter-username">
-					<span class="at">@</span>GeometricJim
-				</span>
-			</p>
-		</header>
+		{% include partials/header.html %}
 	</div>
 	<div id="right" {% if throuple %}class="throuple"{% endif %}>
 		<section class="camera"></section>
