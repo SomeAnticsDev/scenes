@@ -6,15 +6,10 @@
 			<span class="at">@</span>SomeAnticsDev
 		</span>
 
-		<!-- {% for guestTwitter in guestTwitters %} -->
-		<!-- <span class="twitter-username"> -->
-			<!-- <span class="at">@</span>{{ guestTwitter }} -->
-		<!-- </span> -->
-		<!-- {% endfor %} -->
-
-		{% include icons/twitch-logo.html %}
+		{% for guestTwitter in guestTwitters %}
 		<span class="twitter-username">
-			<span class="at">@</span>GeometricJim
+			<span class="at">@</span>{{ guestTwitter }}
 		</span>
+		{% endfor %}
 	</p>
 </header>
