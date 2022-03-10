@@ -25,9 +25,9 @@ module.exports = async () => {
 	// const [nextStream] = upcomingStreams.events;
 
 	const nextStream = {
-		title: `Making the Web Spicier with Open UI, with Dave Rupert`,
-		date: '2022-03-08T14:00:00.000',
-		hosts: [{name: 'Dave Rupert', twitter: 'davatron5000'}]
+		title: `JavaScript Problems: CSS Solutions, with Amit Sheen`,
+		date: '2022-03-15T14:00:00.000',
+		hosts: [{name: 'Amit Sheen', twitter: 'amit_sheen'}]
 	}
 
 	console.log(nextStream)
