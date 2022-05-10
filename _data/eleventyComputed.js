@@ -33,7 +33,7 @@ module.exports = async () => {
 	// console.log(nextStream)
 
 	return {
-		title: nextStream.fullTitle || nextStream.title,
+		title: 'Build a Minesweeper Game with Vanilla JavaScript, with Chris Ferdinandi' || nextStream.fullTitle || nextStream.title,
 		streamTime: nextStream.date,
 		guestTwitters: nextStream
 			.hosts
