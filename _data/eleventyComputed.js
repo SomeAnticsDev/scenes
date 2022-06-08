@@ -21,14 +21,14 @@ module.exports = async () => {
 	 * 		}[]
 	 * 	}}
 	 */
-	// const upcomingStreams = await fetch('https://someantics.dev/api/upcomingStreams.json').then(res => res.json());
-	// const [nextStream] = upcomingStreams.events;
+	const upcomingStreams = await fetch('https://someantics.dev/api/upcomingStreams.json').then(res => res.json());
+	const [nextStream] = upcomingStreams.events;
 
-	const nextStream = {
-		title: `Accessibility Office Hours`,
-		date: '2022-06-07T14:00:00.000',
-		hosts: []
-	}
+	// const nextStream = {
+	// 	title: `Accessibility Office Hours`,
+	// 	date: '2022-06-07T14:00:00.000',
+	// 	hosts: []
+	// }
 
 	// console.log(nextStream)
 
