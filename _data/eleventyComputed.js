@@ -33,7 +33,7 @@ module.exports = async () => {
 	// console.log(nextStream)
 
 	return {
-		title: nextStream.fullTitle || nextStream.title,
+		title: 'Accessibility Office Hours: Ask Me Your Questions!' || nextStream.fullTitle || nextStream.title,
 		streamTime: nextStream.date,
 		guestTwitters: nextStream
 			.hosts
