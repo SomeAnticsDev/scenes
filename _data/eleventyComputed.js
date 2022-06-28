@@ -33,7 +33,7 @@ module.exports = async () => {
 	// console.log(nextStream)
 
 	return {
-		title: 'Adaptive SVGs for Accessibility, Responsiveness & More with Heather S. Neff' || nextStream.fullTitle || nextStream.title,
+		title: nextStream.fullTitle || nextStream.title,
 		streamTime: nextStream.date,
 		guestTwitters: nextStream
 			.hosts
