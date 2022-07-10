@@ -21,6 +21,8 @@ body::-webkit-scrollbar {
     --secondary-soft: #fce8e8;
     --secondary-shade: #cd2210;
     --ternary: #eed043;
+	/* --ternary-soft: #f9edb9; */
+	--ternary-soft: #fbf3d0;
     --ternary-glare: #ffe56a;
     --ternary-shade: #dab819;
     --lightgray: #fcfcfc;

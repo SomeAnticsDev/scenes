@@ -124,3 +124,24 @@
 	color: var(--ternary);
 	font-weight: 900;
 }
+
+[data-twitch-message-status~="highlighted"] {
+	/* background-color: var(--primary-shade); */
+	background-image: linear-gradient(
+		to right,
+		rgba(40, 2, 65, 0.2) 0%,
+		rgba(40, 2, 65, 0.9) 100%
+	);
+	width: calc(100% + 2em);
+	margin-left: -1em;
+	padding-left: 1em;
+}
+
+[data-twitch-message-status~="highlighted"] .message {
+	padding-bottom: 0.75em;
+	color: var(--ternary-soft);
+}
+
+[data-twitch-message-status~="highlighted"] .message:first-child {
+	padding-top: 0.75em;
+}
