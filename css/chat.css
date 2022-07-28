@@ -150,3 +150,7 @@
 [data-twitch-message-status~="highlighted"] .message:first-child {
 	padding-top: 0.75em;
 }
+
+[data-twitch-message-status~="action"] .message {
+	font-style: italic;
+}

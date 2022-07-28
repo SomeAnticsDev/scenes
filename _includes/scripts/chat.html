@@ -57,12 +57,14 @@
 	 * @param {Object<string, string[]>} emotes ranges for emotes in message contents
 	 */
 	function displayMessage(user, message, flags, self, extra) {
+		console.log({user, message, flags, self, extra});
 		const newMessage = document.createElement('li');
 
 		// Message-wide style hooks
 		const messageStatus = [];
 		if (flags.highlighted) messageStatus.push('highlighted');
 		if (flags.customReward) messageStatus.push('customReward');
+		if (extra.messageType === 'action') messageStatus.push('action');
 		if (messageStatus.length > 0) {
 			newMessage.setAttribute(
 				'data-twitch-message-status',
