@@ -33,7 +33,7 @@ module.exports = async () => {
 	// console.log(nextStream)
 
 	return {
-		title: 'Performant, Resumable Sites with Qwik and Partytown, with Miško Hevery' || nextStream.fullTitle || nextStream.title,
+		title: nextStream.fullTitle || nextStream.title,
 		streamTime: nextStream.date,
 		guestTwitters: nextStream
 			.hosts
