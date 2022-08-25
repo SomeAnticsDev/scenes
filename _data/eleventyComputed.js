@@ -7,6 +7,7 @@ module.exports = async () => {
 	 * 			title: string,
 	 * 			fullTitle: string,
 	 * 			hosts: Host[],
+	 * 			guests: Host[],
 	 * 			date: string,
 	 * 			slug: string,
 	 * 			url: string
@@ -14,25 +15,28 @@ module.exports = async () => {
 	 * 	}}
 	 */
 	const upcomingStreams = await fetch('https://someantics.dev/api/upcomingStreams.json').then(res => res.json());
-	// const [nextStream] = upcomingStreams.events;
+	const [nextStream] = upcomingStreams.events;
 
-	const nextStream = {
-		title: `Help me build the Some Antics website!`,
-		date: '2022-08-23T14:00:00.000',
-		hosts: []
-	}
+	// const nextStream = {
+	// 	title: `Help me build the Some Antics website!`,
+	// 	date: '2022-08-23T14:00:00.000',
+	// 	hosts: []
+	// }
 
-	// console.log(nextStream)
+	console.log(nextStream)
+
+	const {hosts = [], guests = []} = nextStream;
+	const people = [...hosts, ...guests];
+	const guestTwitters = people
+		.filter(person => person.twitter && (person.name !== 'Ben Myers'))
+		.map(person => person.twitter);
 
 	return {
 		title: nextStream.fullTitle || nextStream.title,
 		shortTitle: nextStream.title,
 		streamTime: nextStream.date,
+		guestTwitters
 		// formattedHosts: formatHosts(nextStream.hosts),
-		guestTwitters: nextStream
-			.hosts
-			.filter(host => host.twitter && host.name !== 'Ben Myers')
-			.map(host => host.twitter)
 	}
 }
 
