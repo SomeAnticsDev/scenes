@@ -32,7 +32,7 @@ module.exports = async () => {
 		.map(person => person.twitter);
 
 	return {
-		title: nextStream.fullTitle || nextStream.title,
+		title: 'Seamless Page Transitions with Astro and Web APIs (with Maxi Ferreira)' || nextStream.fullTitle || nextStream.title,
 		shortTitle: nextStream.title,
 		streamTime: nextStream.date,
 		guestTwitters
