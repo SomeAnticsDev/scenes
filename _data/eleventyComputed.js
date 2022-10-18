@@ -20,7 +20,9 @@ module.exports = async () => {
 	const nextStream = {
 		title: `Community Building and Mentorship with Nerando Johnson`,
 		date: '2022-10-18T14:00:00.000',
-		hosts: []
+		hosts: [
+			{twitter: 'nerajno'}
+		]
 	}
 
 	console.log(nextStream)
