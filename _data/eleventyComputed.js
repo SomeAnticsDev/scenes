@@ -18,8 +18,8 @@ module.exports = async () => {
 	// const [nextStream] = upcomingStreams.events;
 
 	const nextStream = {
-		title: `Accessibility Office Hours`,
-		date: '2022-10-04T14:00:00.000',
+		title: `Community Building and Mentorship with Nerando Johnson`,
+		date: '2022-10-19T14:00:00.000',
 		hosts: []
 	}
 
