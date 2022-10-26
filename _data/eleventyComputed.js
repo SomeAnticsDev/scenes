@@ -15,15 +15,15 @@ module.exports = async () => {
 	 * 	}}
 	 */
 	const upcomingStreams = await fetch('https://someantics.dev/api/upcomingStreams.json').then(res => res.json());
-	// const [nextStream] = upcomingStreams.events;
+	const [nextStream] = upcomingStreams.events;
 
-	const nextStream = {
-		title: `Community Building and Mentorship with Nerando Johnson`,
-		date: '2022-10-18T14:00:00.000',
-		hosts: [
-			{twitter: 'nerajno'}
-		]
-	}
+	// const nextStream = {
+	// 	title: `Community Building and Mentorship with Nerando Johnson`,
+	// 	date: '2022-10-18T14:00:00.000',
+	// 	hosts: [
+	// 		{twitter: 'nerajno'}
+	// 	]
+	// }
 
 	console.log(nextStream)
 
